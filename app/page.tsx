@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuth } from '@/contexts/auth-context';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/contexts/auth-context";
 
 export default function HomePage() {
   const { user, loading } = useAuth();
@@ -10,10 +10,10 @@ export default function HomePage() {
 
   useEffect(() => {
     if (!loading) {
-      if (user) {
-        router.push('/products');
+      if (true) {
+        router.push("/products");
       } else {
-        router.push('/auth/signin');
+        router.push("/auth/signin");
       }
     }
   }, [user, loading, router]);

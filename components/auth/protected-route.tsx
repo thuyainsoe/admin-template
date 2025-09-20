@@ -1,15 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useAuth } from "@/contexts/auth-context";
+// Imports commented out for temporary auth disable
+// import { useEffect } from "react";
+// import { useRouter } from "next/navigation";
+// import { useAuth } from "@/contexts/auth-context";
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
   requireRole?: string[];
 }
 
-export default function ProtectedRoute({ children, requireRole }: ProtectedRouteProps) {
+export default function ProtectedRoute({ children }: ProtectedRouteProps) {
+  // TEMPORARY: Auth disabled - always allow access
+  return <>{children}</>;
+
+  /* Original auth logic commented out for temporary disable:
   const { user, loading } = useAuth();
   const router = useRouter();
 
@@ -54,4 +59,5 @@ export default function ProtectedRoute({ children, requireRole }: ProtectedRoute
   }
 
   return <>{children}</>;
+  */
 }
