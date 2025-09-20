@@ -1,7 +1,4 @@
-import type {
-  SelectOption,
-  FormSchema,
-} from "@/components/form/form-field-generator";
+import { FormSchema, SelectOption } from "@/components/form/fields/types";
 
 export const UserFormFieldsSchema = ({
   roleOptions,
